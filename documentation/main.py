@@ -47,7 +47,7 @@ async def fetch_url(url: str):
             return "Timeout error"
 
 @mcp.tool()
-async def get_docs():
+async def get_docs(query: str, library: str):
     """
     Search the docs for a given query and library.
     Supports langchain, openai, and llama-index.
@@ -79,4 +79,4 @@ async def get_docs():
 
 
 if __name__ == "__main__":
-    mcp.run(transport+"stdio")
+    mcp.run(transport="stdio")
